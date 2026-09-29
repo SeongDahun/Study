@@ -1164,7 +1164,7 @@
         <div style="padding:9px 12px;background:var(--surface);border-radius:8px;font-size:13px;font-weight:700;white-space:nowrap">뉴스검색</div>
       </div>
     </div>
-    <div class="foot" style="border-top:1px solid #E0E0E0;padding-top:12px"><span style="color:var(--primary);font-weight:700;font-size:18px">API는 서비스마다 다른 언어, MCP는 그 사이에서 통역해주는 공통 언어예요</span></div>
+    <div class="foot foot-low" style="border-top:1px solid #E0E0E0;padding-top:12px;margin-bottom:-30px"><span style="color:var(--primary);font-weight:700;font-size:18px">API는 서비스마다 다른 언어, MCP는 그 사이에서 통역해주는 공통 언어예요</span></div>
   </section>
 
   <!-- 4-1b. 프롬프트와 프롬프트 엔지니어링 -->
@@ -1185,7 +1185,7 @@
     <div class="row">
       <div class="col" style="flex:0 0 34%;display:flex;flex-direction:column">
         <div class="card" style="margin-bottom:12px"><div style="font-size:19px;font-weight:800;color:var(--primary);margin-bottom:6px">프롬프트 (Prompt)</div>
-          <div style="font-size:16px">AI에게 주는 입력값<br>지시문 · 질문</div></div>
+          <div style="font-size:16px">AI에게 주는 입력값 : 지시문 · 질문</div></div>
         <div class="card" style="margin-bottom:12px"><div style="font-size:19px;font-weight:800;color:var(--primary);margin-bottom:6px">프롬프트 엔지니어링</div>
           <div style="font-size:16px">원하는 최적의 출력을 얻기 위해<br>이 입력값을 <b>설계하고 최적화하는 기술</b></div></div>
         <div class="tip" style="margin-top:auto">💡 <strong>왜 중요한가</strong><br>명확한 <b>맥락</b>과 <b>제약 조건</b>을 주면<br>부적절한 답변이나 환각(그럴듯한 오답)을<br>줄이는 데 도움이 돼요.</div>
@@ -1193,8 +1193,8 @@
       <div class="col" style="padding-left:28px;border-left:1px solid #E0E0E0;display:flex;flex-direction:column">
         <h2>자주 쓰는 기법 세 가지</h2>
         <ol class="step-list" style="margin-bottom:0">
-          <li style="margin-bottom:12px"><div class="sn">01</div><div class="sb"><strong>역할(Persona) 부여</strong><span>관점과 전문성을 정해 주기</span><div class="prompt-box mini">너는 10년 차 기획조정실 과장이야.</div></div></li>
-          <li style="margin-bottom:12px"><div class="sn">02</div><div class="sb"><strong>맥락 · 제약 조건 주기</strong><span>목적 · 대상 · 형식 · 분량을 정해 주기</span><div class="prompt-box mini">임원 보고용으로, 표 1개 포함, A4 1장 이내로 정리해줘.</div></div></li>
+          <li style="margin-bottom:12px"><div class="sn">01</div><div class="sb"><strong style="display:inline">역할(Persona) 부여:</strong> <span>관점과 전문성을 정해 주기</span><div class="prompt-box mini">너는 10년 차 기획조정실 과장이야.</div></div></li>
+          <li style="margin-bottom:12px"><div class="sn">02</div><div class="sb"><strong style="display:inline">맥락 · 제약 조건 주기:</strong> <span><b>목적 · 대상 · 형식 · 분량</b>을 정해 주기</span><div class="prompt-box mini">임원 보고용으로, 표 1개 포함, A4 1장 이내로 정리해줘.</div></div></li>
           <li style="margin-bottom:12px"><div class="sn">03</div><div class="sb"><strong>제로샷(Zero-shot) vs. 퓨샷(Few-shot)</strong><span>제로샷은 예시 없이 지시만, 퓨샷은 답변 예시를 1~3개 함께 주기<br>→ 퓨샷은 AI가 답변의 <b>형식과 패턴</b>을 파악하는 데 도움</span></div></li>
         </ol>
         <div class="prompt-box" style="font-size:15px;line-height:1.6;margin-top:auto">너는 지주회사 기획조정실의 10년 차 과장이야. 아래 예시와 같은 형식으로,<br>신입 사원이 첫 주에 꼭 알아야 할 기획조정실 업무 용어 5개를 한 줄씩 설명해줘.<br>예) KPI — 부서·계열사별 목표 달성도를 재는 핵심 성과 지표</div>
@@ -1865,7 +1865,7 @@
         // 28쪽부터는 본문 하단을 안쪽 여백선(아래 64px)에 맞춤
         const lim = s.classList.contains('fit-line') ? 64 : 26;
         for (const e of s.querySelectorAll('*')){
-          if (e.classList.contains('num') || e.closest('.steptabs')) continue;
+          if (e.classList.contains('num') || e.closest('.steptabs') || e.closest('.foot-low')) continue;
           const b = e.getBoundingClientRect(); if (!b.height) continue;
           if (b.bottom > r.bottom - lim || b.right > r.right - 30) return false;
         }
