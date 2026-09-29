@@ -157,6 +157,7 @@
   .step-list .sb span, .prompt-box, .quiz-q, .sub{line-height:1.7!important}
   .step-list li{margin-bottom:18px}
   .quiz{gap:12px}
+  .done-list > div{white-space:nowrap}
 </style>
 </head>
 <body>
@@ -1696,16 +1697,17 @@
       <div class="flow-arrow">→</div>
       <div class="flow-step"><div class="flow-n">4교시</div><div class="flow-t">부서로 가져가기</div><div class="flow-s">발표 · 현업 적용</div></div>
     </div>
-    <div style="flex:1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;min-height:0">
+    <div style="flex:1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-bottom:16px">
       <div style="display:flex;flex-direction:column">
         <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:16px">
           <div style="width:28px;height:28px;border-radius:50%;background:#F3C989;color:var(--primary);font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center">1</div>
           <div style="font-size:16px;font-weight:700;color:#F3C989">1교시</div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:14px;font-size:17px;line-height:1.5">
-          <div>✓ 공식 에이전트 활용 + 주간업무 보고서 에이전트 만들기</div>
+        <div class="done-list" style="display:flex;flex-direction:column;gap:16px;font-size:16px;line-height:1.5">
+          <div>✓ 공식 에이전트 활용</div>
+          <div>✓ 주간업무 보고서 에이전트</div>
           <div>✓ 보고서 파일(Word/HWP) 생성</div>
-          <div>✓ 팀 에이전트 공유법 · 회사 공식 에이전트 등록법</div>
+          <div>✓ 팀 공유 · 회사 공식 등록</div>
         </div>
       </div>
       <div style="display:flex;flex-direction:column;border-left:1px solid rgba(255,255,255,.25);padding-left:20px">
@@ -1713,11 +1715,12 @@
           <div style="width:28px;height:28px;border-radius:50%;background:#F3C989;color:var(--primary);font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center">2</div>
           <div style="font-size:16px;font-weight:700;color:#F3C989">2교시</div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:14px;font-size:17px;line-height:1.5">
+        <div class="done-list" style="display:flex;flex-direction:column;gap:16px;font-size:16px;line-height:1.5">
           <div>✓ 대화 예약 자동화</div>
-          <div>✓ 워크플로우 템플릿(회사 360° 실사) → 결과 메일</div>
-          <div>✓ 말로 만드는 워크플로우 · 웍스+</div>
-          <div>✓ 도구 개념 · 프롬프트 · 크레딧 절약</div>
+          <div>✓ 360° 실사 템플릿 → 결과 메일</div>
+          <div>✓ 말로 만드는 워크플로우</div>
+          <div>✓ 웍스+</div>
+          <div>✓ 도구 개념 · 프롬프트 · 크레딧</div>
         </div>
       </div>
       <div style="display:flex;flex-direction:column;border-left:1px solid rgba(255,255,255,.25);padding-left:20px">
@@ -1725,10 +1728,11 @@
           <div style="width:28px;height:28px;border-radius:50%;background:#F3C989;color:var(--primary);font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center">3</div>
           <div style="font-size:16px;font-weight:700;color:#F3C989">3교시</div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:14px;font-size:17px;line-height:1.5">
+        <div class="done-list" style="display:flex;flex-direction:column;gap:16px;font-size:16px;line-height:1.5">
           <div>✓ 퀴즈</div>
-          <div>✓ 내 업무용 에이전트 · 워크플로우</div>
-          <div>✓ 소개 자료 1장 · 조 대표 선정</div>
+          <div>✓ 내 에이전트 · 워크플로우</div>
+          <div>✓ 소개 자료 1장</div>
+          <div>✓ 조 대표 선정</div>
         </div>
       </div>
       <div style="display:flex;flex-direction:column;border-left:1px solid rgba(255,255,255,.25);padding-left:20px">
@@ -1736,14 +1740,14 @@
           <div style="width:28px;height:28px;border-radius:50%;background:#F3C989;color:var(--primary);font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center">4</div>
           <div style="font-size:16px;font-weight:700;color:#F3C989">4교시</div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:14px;font-size:17px;line-height:1.5">
+        <div class="done-list" style="display:flex;flex-direction:column;gap:16px;font-size:16px;line-height:1.5">
           <div>✓ 조별 발표</div>
           <div>✓ 최종 투표 결과</div>
           <div>✓ 내일부터 할 일 3가지</div>
         </div>
       </div>
     </div>
-    <div class="foot">
+    <div class="foot foot-low" style="margin-bottom:-30px">
       <span>강사 · 성다훈(ekgns324@sookmyung.ac.kr)</span>
     </div>
   </section>
@@ -1878,7 +1882,7 @@
             if (b.top < pr.top - 1 || b.bottom > pr.bottom + 1 || b.top < headBottom) return false;
           }
         }
-        for (const e of s.querySelectorAll('.card,.note,.tip,.warn,.done,.prompt-box,.quiz-row'))
+        for (const e of s.querySelectorAll('.card,.note,.tip,.warn,.done,.prompt-box,.quiz-row,.done-list > div'))
           if (e.scrollHeight > e.clientHeight + 1 || e.scrollWidth > e.clientWidth + 1) return false;
         // 카드 안 한 줄 제목(nowrap)이 글자 영역을 넘으면 실패
         for (const e of s.querySelectorAll('.card > *'))
