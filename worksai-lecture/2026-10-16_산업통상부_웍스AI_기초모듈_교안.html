@@ -386,21 +386,8 @@
   </section>
 
   <!-- 2. 강사 소개 -->
-  <section class="slide ins-slide">
+  <section class="slide">
     <div class="num"></div>
-    <style>
-      .ins-slide .ins-top{display:flex;align-items:center;gap:28px;padding:18px 24px;border-radius:16px;background:linear-gradient(135deg,#F4F4FE 0%,#EAF3FF 100%)}
-      .ins-slide .ins-name{flex:0 0 auto;display:flex;flex-direction:column;align-items:flex-start;gap:8px}
-      .ins-slide .ins-name h1{font-size:46px;margin:0;line-height:1}
-      .ins-slide .ins-name span{padding:3px 10px;border-radius:999px;background:var(--grad);color:#fff;font-size:13px;font-weight:800;white-space:nowrap}
-      .ins-slide .vision{margin:0;padding:4px 0 4px 22px;border-left:4px solid var(--primary);font-size:21px;line-height:1.5;align-self:center}
-      .ins-slide .cv-label{display:flex;align-items:center;gap:8px;margin-top:20px}
-      .ins-slide .cv-label::after{content:"";flex:1;height:1px;background:var(--line)}
-      .ins-slide .cv li{padding:8px 0}
-      .ins-slide .cv-org{position:relative;padding-left:14px}
-      .ins-slide .cv-org::before{content:"";position:absolute;left:0;top:.55em;width:6px;height:6px;border-radius:50%;background:var(--primary)}
-      .ins-slide .cv-chips span{background:#fff;border:1.5px solid var(--lav2);color:var(--ink)}
-    </style>
     <div class="row" style="align-items:flex-start;gap:48px">
       <div style="flex:0 0 300px;display:flex;flex-direction:column;gap:14px">
         <div class="kicker"><span class="tag">INSTRUCTOR</span>강사 소개</div>
@@ -409,21 +396,21 @@
       <div class="col">
         <!-- 사진 윗선에 맞추려고 왼쪽 "강사 소개" 줄만큼 비워 둠 -->
         <div class="kicker" aria-hidden="true" style="visibility:hidden;margin-bottom:14px"><span class="tag">&nbsp;</span></div>
-        <div class="ins-top">
-          <div class="ins-name"><h1>성다훈</h1><span>웍스AI 공식 인증 강사</span></div>
-          <div class="vision">"AI를 배우는 시간이 아니라,<br>내일의 일하는 방식이 바뀌는 시간을 만듭니다."</div>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:24px">
+          <h1 style="font-size:44px;margin:0;line-height:1">성다훈</h1>
+          <div class="vision" style="margin-top:0">"AI를 배우는 시간이 아니라,<br>내일의 일하는 방식이 바뀌는 시간을 만듭니다."</div>
         </div>
-        <div class="cv-label">🎓 소속 · 학력</div>
+        <div class="cv-label">소속 · 학력</div>
         <ul class="cv">
           <li><span class="cv-org">웍스AI</span><span class="cv-desc">공식 인증 강사 · 기업·기관 AI 실습 교육</span></li>
           <li><span class="cv-org">숙명여자대학교</span><span class="cv-desc">IT공학과 박사과정 재학</span></li>
         </ul>
-        <div class="cv-label">🏢 주요 강의</div>
+        <div class="cv-label">주요 강의</div>
         <ul class="cv">
           <li><span class="cv-org">(주)원익홀딩스</span><span class="cv-desc">기획조정실 웍스AI 에이전트·워크플로우 교육</span></li>
           <li><span class="cv-org">(주)로지션</span><span class="cv-desc">CEO · 고위임원단 생성형 AI 활용 교육</span></li>
         </ul>
-        <div class="cv-label">🤝 보조강사 (실습 코치)</div>
+        <div class="cv-label">보조강사 (실습 코치)</div>
         <div class="cv-chips"><span>삼성 전 계열사 사장단 · 부사장단 · 상무 · 이사</span><span>농협중앙회 최고경영진</span><span>삼성전자 DS부문 보직장</span><span>삼성물산 EPC관리조직</span><span>삼성화재</span><span>메리츠화재</span></div>
       </div>
     </div>
