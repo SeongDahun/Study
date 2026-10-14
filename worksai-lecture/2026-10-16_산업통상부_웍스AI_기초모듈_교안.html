@@ -145,6 +145,9 @@
   .step-list{list-style:none;padding:0;margin:0;font-size:18px;line-height:1.45}
   .step-list li{display:flex;gap:14px;margin-bottom:12px;padding-bottom:12px;border-bottom:2px solid #E5E7EB}
   .step-list li:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+  .step-list.spread li{margin:0;padding:0;border:none}
+  .step-list.spread li.gap{flex:1;min-height:20px;position:relative}
+  .step-list.spread li.gap::before{content:"";position:absolute;left:0;right:0;top:50%;border-top:2px solid #E5E7EB}
   .step-list .sn{flex:0 0 36px;height:36px;border-radius:8px;background:var(--grad);color:#fff;font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center}
   .step-list .sb strong{display:block;color:var(--ink);font-size:19px}
   .tier{border-radius:12px;padding:18px 20px;display:flex;flex-direction:column}
@@ -796,9 +799,11 @@
     </div>
     <div class="row">
       <div class="col" style="flex:0 0 42%;display:flex;flex-direction:column">
-        <ol class="step-list">
+        <ol class="step-list spread" style="flex:1;display:flex;flex-direction:column">
           <li><div class="sn">01</div><div class="sb"><strong>비교할 모델 2개 고르기</strong><span>입력창 오른쪽 아래 <span class="ui">Auto ▾</span><br>눌러서 <b style="background:var(--lav);color:var(--primary);padding:1px 6px;border-radius:5px;font-weight:800">첫 번째 모델 선택</b><br><span style="font-size:15px;color:var(--muted)">예) 빠른 모델 vs 고성능 모델 (앞 장 표 참고)</span></span></div></li>
+          <li class="gap" aria-hidden="true"></li>
           <li><div class="sn">02</div><div class="sb"><strong>질문 보내기</strong><span>오른쪽 프롬프트를 복사해 입력</span></div></li>
+          <li class="gap" aria-hidden="true"></li>
           <li><div class="sn">03</div><div class="sb"><strong>두 번째 모델로 같은 질문</strong><span><span class="ui">새 대화</span> → <b style="background:var(--lav);color:var(--primary);padding:1px 6px;border-radius:5px;font-weight:800">두 번째 모델 선택</b> → 같은 질문<br>답변의 길이 · 말투 · 정확도 비교<br><span style="font-size:15px;color:var(--muted)">답한 모델은 답변 끝에 표시돼요</span></span></div></li>
         </ol>
       </div>
