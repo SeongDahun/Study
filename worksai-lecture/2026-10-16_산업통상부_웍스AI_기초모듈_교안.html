@@ -193,18 +193,30 @@
   .deck>.page-jump #pageTotal{margin-right:2px}
   /* 왼쪽 목차 탭 — 클릭하면 해당 단원 첫 쪽으로, 지금 단원은 강조 */
   .toc{position:fixed;top:48px;bottom:4px;left:0;width:214px;z-index:50;display:flex;flex-direction:column;
-    justify-content:center;gap:10px;padding:0 0 0 16px}
-  .toc button{display:flex;align-items:center;gap:10px;width:100%;text-align:left;cursor:pointer;
-    border:none;border-radius:999px 0 0 999px;padding:12px 14px;background:rgba(255,255,255,.08);
-    color:#CBD5E1;font:700 15px "Pretendard","Malgun Gothic","맑은 고딕",sans-serif;white-space:nowrap;transition:background .15s,color .15s}
-  .toc button:hover{background:rgba(255,255,255,.18);color:#fff}
-  .toc button{gap:12px;padding:10px 14px 10px 12px}
+    justify-content:center;gap:8px;padding:0 0 0 14px;
+    background:linear-gradient(180deg,rgba(93,95,239,.10) 0%,rgba(49,130,246,.04) 60%,transparent 100%)}
+  .toc .toc-h{padding:0 14px 6px 6px;margin-bottom:4px;border-bottom:1px solid rgba(255,255,255,.10)}
+  .toc .toc-h small{display:block;font:800 10px "Pretendard","Malgun Gothic",sans-serif;letter-spacing:.18em;color:#8B9DF9}
+  .toc .toc-h strong{display:block;margin-top:3px;font:800 15px "Pretendard","Malgun Gothic",sans-serif;color:#fff}
+  .toc .toc-h span{display:block;margin-top:2px;font:600 11px "Pretendard","Malgun Gothic",sans-serif;color:#94A3B8}
+  .toc button{position:relative;display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;
+    border:1px solid rgba(255,255,255,.06);border-right:none;border-radius:14px 0 0 14px;padding:10px 12px 10px 10px;
+    background:rgba(255,255,255,.05);color:#CBD5E1;font:700 15px "Pretendard","Malgun Gothic","맑은 고딕",sans-serif;
+    white-space:nowrap;transition:background .15s,color .15s,transform .15s}
+  .toc button:hover{background:rgba(255,255,255,.12);color:#fff;transform:translateX(-2px)}
   .toc button .tn{flex:0 0 26px;display:flex;flex-direction:column;align-items:center;gap:2px;
-    padding:6px 0;border-radius:7px;font-size:11px;line-height:1.1;font-weight:800;background:rgba(255,255,255,.14);color:#fff}
+    padding:6px 0;border-radius:8px;font-size:11px;line-height:1.1;font-weight:800;background:rgba(255,255,255,.12);color:#fff}
   .toc button .tn i{font-style:normal}
   .toc button .tn b{margin-top:2px;padding-top:3px;border-top:1px solid rgba(255,255,255,.45);font-size:14px;line-height:1}
-  .toc button.active{background:#fff;color:var(--primary)}
-  .toc button.active .tn{background:var(--grad)}
+  .toc button .tt{display:flex;flex-direction:column;gap:3px;min-width:0}
+  .toc button .tt em{font-style:normal;font-size:11px;font-weight:600;color:#7C8BA5}
+  .toc button.done .tn{background:rgba(139,157,249,.30)}
+  .toc button.done .tt em::before{content:"✓ ";color:#8B9DF9;font-weight:800}
+  .toc button.active{background:#fff;color:var(--ink);border-color:#fff;box-shadow:0 8px 24px rgba(93,95,239,.35)}
+  .toc button.active::before{content:"";position:absolute;left:0;top:12px;bottom:12px;width:4px;border-radius:0 4px 4px 0;background:var(--grad)}
+  .toc button.active .tn{background:var(--grad);box-shadow:0 3px 8px rgba(93,95,239,.4)}
+  .toc button.active .tt{color:var(--primary)}
+  .toc button.active .tt em{color:var(--muted)}
   .stage{left:214px}
   .toc,.stage{transition:transform .2s,left .2s}
   body.toc-closed .toc{transform:translateX(-100%)}
@@ -339,11 +351,12 @@
 </div>
 
 <nav class="toc" id="toc" aria-label="목차">
-  <button type="button" data-sec="01"><span class="tn"><i>모</i><i>듈</i><b>1</b></span>웍스AI 이해와 보안</button>
-  <button type="button" data-sec="02"><span class="tn"><i>모</i><i>듈</i><b>2</b></span>모델·토큰</button>
-  <button type="button" data-sec="03"><span class="tn"><i>모</i><i>듈</i><b>3</b></span>답변 잘 얻는 법</button>
-  <button type="button" data-sec="04"><span class="tn"><i>모</i><i>듈</i><b>4</b></span>공식 에이전트</button>
-  <button type="button" data-sec="05"><span class="tn"><i>모</i><i>듈</i><b>5</b></span>나만의 에이전트</button>
+  <div class="toc-h"><small>CURRICULUM</small><strong>오늘의 모듈</strong><span>5개 모듈 · 2시간</span></div>
+  <button type="button" data-sec="01"><span class="tn"><i>모</i><i>듈</i><b>1</b></span><span class="tt">웍스AI 이해와 보안<em>둘러보기 · 보안 기준</em></span></button>
+  <button type="button" data-sec="02"><span class="tn"><i>모</i><i>듈</i><b>2</b></span><span class="tt">모델·토큰<em>모델 고르기 · 크레딧</em></span></button>
+  <button type="button" data-sec="03"><span class="tn"><i>모</i><i>듈</i><b>3</b></span><span class="tt">답변 잘 얻는 법<em>4요소 · 환각 줄이기</em></span></button>
+  <button type="button" data-sec="04"><span class="tn"><i>모</i><i>듈</i><b>4</b></span><span class="tt">공식 에이전트<em>법령 · 뉴스 · 공시</em></span></button>
+  <button type="button" data-sec="05"><span class="tn"><i>모</i><i>듈</i><b>5</b></span><span class="tt">나만의 에이전트<em>1쪽 보고서 · 내 업무</em></span></button>
 </nav>
 
 <div class="stage">
@@ -1565,7 +1578,7 @@
     document.getElementById('pageInput').value = idx + 1;
     document.getElementById('progressFill').style.width = ((idx+1) / total * 100) + '%';
     let cur = -1; tocItems.forEach((t, k) => { if (t.at >= 0 && t.at <= idx) cur = k; });
-    tocItems.forEach((t, k) => t.btn.classList.toggle('active', k === cur));
+    tocItems.forEach((t, k) => { t.btn.classList.toggle('active', k === cur); t.btn.classList.toggle('done', cur >= 0 && k < cur); });
   }
   function goNext(){ if (idx < total - 1){ idx++; render(); } }
   function goPrev(){ if (idx > 0){ idx--; render(); } }
