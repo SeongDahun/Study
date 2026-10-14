@@ -141,7 +141,8 @@
   .shot img{display:block;max-width:100%;max-height:430px;object-fit:contain;border:1px solid var(--line);border-radius:12px;box-shadow:0 4px 20px rgba(15,23,42,.10);background:#fff}
   .shot .cap{font-size:13px;color:var(--muted);text-align:center;margin-top:8px}
   .step-list{list-style:none;padding:0;margin:0;font-size:18px;line-height:1.45}
-  .step-list li{display:flex;gap:14px;margin-bottom:18px}
+  .step-list li{display:flex;gap:14px;margin-bottom:12px;padding-bottom:12px;border-bottom:2px solid #E5E7EB}
+  .step-list li:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
   .step-list .sn{flex:0 0 36px;height:36px;border-radius:8px;background:var(--grad);color:#fff;font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center}
   .step-list .sb strong{display:block;color:var(--ink);font-size:19px}
   .tier{border-radius:12px;padding:18px 20px;display:flex;flex-direction:column}
@@ -798,7 +799,6 @@
           <li><div class="sn">02</div><div class="sb"><strong>질문 보내기</strong><span>오른쪽 프롬프트를 복사해 입력</span></div></li>
           <li><div class="sn">03</div><div class="sb"><strong>두 번째 모델로 같은 질문</strong><span><span class="ui">새 대화</span> → <b style="background:var(--lav);color:var(--primary);padding:1px 6px;border-radius:5px;font-weight:800">두 번째 모델 선택</b> → 같은 질문<br>답변의 길이 · 말투 · 정확도 비교<br><span style="font-size:15px;color:var(--muted)">답한 모델은 답변 끝에 표시돼요</span></span></div></li>
         </ol>
-        <div class="done" style="margin-top:auto">✅ <strong>완료 기준</strong><br>두 답변을 <b>나란히 캡처</b> + <b>더 나은 쪽과 이유 한 줄</b>을 패들렛에<br><span style="font-size:15px">올리는 방법은 다음 장에서 →</span></div>
       </div>
       <div class="col" style="padding-left:28px;border-left:1px solid var(--line);display:flex;flex-direction:column">
         <h2>실습 프롬프트 (하나 골라서)</h2>
@@ -809,7 +809,7 @@
           <li>"'공급망 안정화'를 주제로 한 국장님 인사말 첫 문단을 격식 있게 써줘"</li>
         </ul>
         </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:auto 0 0">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0 16px">
           <div class="card" style="padding:14px 18px;background:var(--surface)">
             <div style="font-size:15px;font-weight:800;color:var(--muted);margin-bottom:4px">서비스를 따로 쓰면</div>
             <div style="font-size:16px;line-height:1.6">AI 회사 7곳마다 계정 7개<br>구독료도 <b class="nw">7번 따로 결제</b></div>
@@ -819,6 +819,7 @@
             <div style="font-size:16px;line-height:1.6"><b class="nw">계정 하나 · 구독 하나</b>로<br><span class="nw">GPT · Claude · Gemini 등</span> 한 화면에</div>
           </div>
         </div>
+        <div class="done" style="margin-top:auto">✅ <strong>완료 기준</strong><br>두 답변을 <b>나란히 캡처</b> + <b>더 나은 쪽과 이유 한 줄</b>을 패들렛에<br><span style="font-size:15px">올리는 방법은 다음 장에서 →</span></div>
       </div>
     </div>
   </section>
@@ -827,7 +828,7 @@
     <style>
       .share-slide .kc{display:inline-block;min-width:22px;padding:1px 7px;margin:0 1px;border:1px solid #CBD5E1;border-bottom-width:3px;border-radius:6px;background:#fff;color:var(--ink);font-size:14px;font-weight:800;line-height:1.5;text-align:center;font-family:inherit}
       .share-slide .step-list{font-size:16px}
-      .share-slide .step-list li{margin-bottom:14px}
+      .share-slide .step-list li{margin-bottom:8px;padding-bottom:8px}
       .share-slide .step-list .sb strong{font-size:18px}
       .share-slide .mock{border:1.5px solid var(--line);border-radius:14px;background:#0F172A;padding:10px;display:grid;grid-template-columns:1fr 1fr;gap:8px}
       .share-slide .win{background:#fff;border-radius:8px;overflow:hidden}
@@ -847,10 +848,9 @@
     </style>
     <div class="num"></div>
     <div class="steptabs"><div class="tab">① 모델 고르기</div><div class="tab active">② 비교 실습</div><div class="tab">③ 토큰이란</div><div class="tab">④ 크레딧 절약</div></div>
-    <div class="head" style="margin-bottom:22px">
+    <div class="head" style="margin-bottom:18px">
       <div class="kicker"><span class="tag">SHARE</span>모듈 2 · 비교 실습 공유</div>
       <h1>두 답변을 나란히 캡처해 패들렛에 올려요</h1>
-      <p class="sub">창을 두 개로 나눠 띄우면 한눈에 비교돼요</p>
     </div>
     <div class="row">
       <div class="col" style="flex:0 0 50%;display:flex;flex-direction:column">
@@ -861,7 +861,7 @@
           <li><div class="sn">04</div><div class="sb"><strong>한 번에 캡처</strong><span><span class="kc">⊞ Win</span> + <span class="kc">Shift</span> + <span class="kc">S</span> → <b>두 창이 다 들어오게</b> 드래그</span></div></li>
           <li style="margin-bottom:0"><div class="sn">05</div><div class="sb"><strong>패들렛에 올리기</strong><span><span class="nw">글 쓰기 → <span class="kc">Ctrl</span> + <span class="kc">V</span>로 캡처 붙여넣기 + <b>어느 답이 더 나은지 이유 한 줄</b></span><br><span style="font-size:14px;color:var(--muted)">길이 · 말투 · 정확도 측면에서 판단할 수 있어요</span></span></div></li>
         </ol>
-        <div class="tip" style="margin-top:auto;font-size:16px">💡 서로의 경험이 모이면<br><b class="nw">우리 부서만의 모델 고르는 기준</b>이 돼요</div>
+        <div class="tip" style="margin-top:auto;font-size:16px;white-space:nowrap">💡 서로의 경험이 모이면 <b>우리 부서만의 모델 고르는 기준</b>이 돼요</div>
       </div>
       <div class="col" style="padding-left:28px;border-left:1px solid var(--line);display:flex;flex-direction:column">
         <div class="mock">
