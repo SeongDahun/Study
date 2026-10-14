@@ -120,6 +120,8 @@
   .slide.show-ans .quiz-a{visibility:visible}
   .reveal-btn{cursor:pointer;border:none;background:var(--grad);color:#fff;font:700 15px "Malgun Gothic",sans-serif;padding:10px 20px;border-radius:8px}
   .steptabs{display:flex;margin:-64px -64px 28px}
+  .cell-ul li{margin:0!important;padding:1px 0!important;font-size:inherit!important}
+  td .cell-ul{font-size:17px}
   .steptabs .tab{flex:1;text-align:center;padding:16px 8px;font-size:15px;font-weight:700;
     background:var(--surface);color:#94A3B8;border-right:1px solid var(--line)}
   .steptabs .tab:last-child{border-right:none}
@@ -776,11 +778,11 @@
     </div>
     <table class="tight" style="font-size:17px">
       <tr><th style="width:15%">이럴 때</th><th style="width:34%">고르는 기준</th><th style="width:23%">모델 예시</th><th style="width:28%">예시 업무</th></tr>
-      <tr><td><strong>빠른 답이 필요</strong></td><td>가볍고 빠른 모델 · 크레딧도 적게 씀</td><td style="font-size:15px;line-height:1.5;color:var(--muted);white-space:nowrap">GPT-6 Luna · Claude Haiku 5.5<br>Gemini 3.8 Flash</td><td>문장 다듬기, 짧은 요약, 번역</td></tr>
-      <tr><td><strong>깊게 따져봐야</strong></td><td>추론 · 고성능 모델 — 느리지만 꼼꼼</td><td style="font-size:15px;line-height:1.5;color:var(--muted);white-space:nowrap">Claude Opus 5.5 · GPT-6 Sol<br>Gemini 3.1 Pro</td><td>정책 대안 비교, 긴 보고서 구조화</td></tr>
+      <tr><td><strong>빠른 답이 필요</strong></td><td><ul class="cell-ul" style="margin:0;padding-left:18px;line-height:1.5"><li>가볍고 빠른 모델</li><li>크레딧도 적게 씀</li></ul></td><td><ul class="cell-ul" style="margin:0;padding-left:18px;line-height:1.5;color:var(--muted);font-size:15px;white-space:nowrap"><li>GPT-6 Luna</li><li>Claude Haiku 5.5</li><li>Gemini 3.8 Flash</li></ul></td><td><ul class="cell-ul" style="margin:0;padding-left:18px;line-height:1.5"><li>문장 다듬기</li><li>짧은 요약</li><li>번역</li></ul></td></tr>
+      <tr><td><strong>깊게 따져봐야</strong></td><td><ul class="cell-ul" style="margin:0;padding-left:18px;line-height:1.5"><li>추론 · 고성능 모델</li><li>느리지만 꼼꼼</li></ul></td><td><ul class="cell-ul" style="margin:0;padding-left:18px;line-height:1.5;color:var(--muted);font-size:15px;white-space:nowrap"><li>Claude Opus 5.5</li><li>GPT-6 Sol</li><li>Gemini 3.1 Pro</li></ul></td><td><ul class="cell-ul" style="margin:0;padding-left:18px;line-height:1.5"><li>정책 대안 비교</li><li>긴 보고서 구조화</li></ul></td></tr>
       <tr><td><strong>잘 모르겠다면</strong></td><td>질문을 보고 웍스AI가 알아서 선택</td><td><span class="ui">Auto</span></td><td>대부분의 일상 업무</td></tr>
     </table>
-    <div class="tip" style="margin-top:20px">💡 <strong>오늘의 결론</strong> — 처음엔 <b>Auto</b>로 충분해요. 결과가 아쉬울 때만 다른 모델로 <b>같은 질문을 다시</b> 해 보세요.</div>
+    <div class="tip" style="margin-top:20px">💡 처음엔 <b>Auto</b>로 충분해요. 결과가 아쉬울 때만 다른 모델로 <b>같은 질문을 다시</b> 해 보세요.</div>
   </section>
 
   <!-- 15. 모델 비교 실습 -->
