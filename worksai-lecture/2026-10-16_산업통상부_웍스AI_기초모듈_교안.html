@@ -593,40 +593,61 @@
   </section>
 
   <!-- 8. 3단계 기준 -->
-  <section class="slide">
+  <section class="slide gate-slide">
+    <style>
+      .gate-slide .lanes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+      .gate-slide .lane{border-radius:16px;padding:0;display:flex;flex-direction:column;background:#fff;border:1.5px solid var(--line);border-top:6px solid var(--lc)}
+      .gate-slide .lane-h{display:flex;align-items:center;gap:14px;padding:12px 18px;background:var(--lc-bg);border-radius:10px 10px 0 0}
+      .gate-slide .lane-ic{flex:0 0 58px;height:58px;border-radius:16px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:34px;line-height:1;box-shadow:0 4px 12px rgba(15,23,42,.08)}
+      .gate-slide .lane-t{font-size:24px;font-weight:900;color:var(--lc);line-height:1.2}
+      .gate-slide .lane-s{font-size:15px;font-weight:700;color:var(--muted);margin-top:2px}
+      .gate-slide .lane ul{list-style:none;margin:0;padding:4px 18px 8px;font-size:17px;line-height:1.45}
+      .gate-slide .lane li{display:flex;gap:10px;align-items:baseline;padding:7px 0;border-bottom:1px dashed var(--line)}
+      .gate-slide .lane li:last-child{border-bottom:none}
+      .gate-slide .lane li::before{content:var(--mk);flex:0 0 16px;text-align:center;font-weight:900;color:var(--lc);font-size:16px}
+      .gate-slide .lane.no{--lc:#DC2626;--lc-bg:#FDECEC;--mk:"✕"}
+      .gate-slide .lane.mid{--lc:#EA580C;--lc-bg:#FFEDD5;--mk:"!"}
+      .gate-slide .lane.ok{--lc:#16A34A;--lc-bg:#E9F7EF;--mk:"✓"}
+      .gate-slide .to{display:inline-block;white-space:nowrap;padding:0 8px;border-radius:999px;background:#FFEDD5;color:#9A3412;font-weight:800}
+      .gate-slide .ask{display:flex;align-items:center;gap:18px;margin-top:16px;padding:14px 22px;border-radius:14px;background:linear-gradient(135deg,#F4F4FE 0%,#EAF3FF 100%);border-left:6px solid var(--primary)}
+      .gate-slide .ask-ic{flex:0 0 52px;height:52px;border-radius:14px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:30px;box-shadow:0 4px 12px rgba(93,95,239,.14)}
+      .gate-slide .ask-q{font-size:21px;font-weight:900;color:var(--ink)}
+      .gate-slide .ask-q em{font-style:normal;color:var(--primary)}
+      .gate-slide .ask-d{font-size:16px;color:var(--text);margin-top:2px}
+    </style>
     <div class="num"></div>
     <div class="steptabs"><div class="tab">① 웍스AI 둘러보기</div><div class="tab">② 정부 지침</div><div class="tab active">③ 3단계 기준</div><div class="tab">④ 가공 예시</div><div class="tab">⑤ O/X 퀴즈</div></div>
-    <div class="head">
+    <div class="head" style="margin-bottom:22px">
       <div class="kicker"><span class="tag">SECURITY</span>01 · 4분</div>
       <h1>입력 전 3초 점검 — 넣어도 되는 정보일까?</h1>
     </div>
-    <div class="cards c3" style="flex:1">
-      <div class="tier no"><h2>🚫 입력 금지</h2>
+    <div class="lanes">
+      <div class="lane no"><div class="lane-h"><div class="lane-ic">🚫</div><div><div class="lane-t">입력 금지</div><div class="lane-s">어떤 형태로도 넣지 않아요</div></div></div>
         <ul>
           <li>비밀 · 대외비 표시 문서</li>
           <li>통상 협상 전략 · 우리 측 입장</li>
           <li>수출통제 · 기술안보 심사 자료</li>
-          <li>기업 영업비밀 · <span class="nw">미공개 투자 정보</span></li>
-          <li>개인정보 <span class="nw">(주민번호·연락처·민원인)</span></li>
+          <li><span>기업 영업비밀 · <span class="nw">미공개 투자 정보</span></span></li>
+          <li><span>개인정보 <span class="nw">(주민번호 · 연락처 · 민원인)</span></span></li>
         </ul></div>
-      <div class="tier mid"><h2>⚠️ 가공 후 입력</h2>
+      <div class="lane mid"><div class="lane-h"><div class="lane-ic">⚠️</div><div><div class="lane-t">가공 후 입력</div><div class="lane-s">바꿔서 넣어요</div></div></div>
         <ul>
-          <li>내부 검토 문서 → 구조 · 서식만</li>
-          <li>기업명 → <b>A사 · B사</b></li>
-          <li>인명 · 직위 → <b>담당자 1 · 2</b></li>
-          <li>민감 수치 → <b>범위 · 비율</b>로</li>
-          <li>회의록 → 발언자 익명화</li>
+          <li><span>내부 검토 문서 → <span class="to">구조 · 서식만</span></span></li>
+          <li><span>기업명 → <span class="to">A사 · B사</span></span></li>
+          <li><span>인명 · 직위 → <span class="to">담당자 1 · 2</span></span></li>
+          <li><span>민감 수치 → <span class="to">범위 · 비율</span></span></li>
+          <li><span>회의록 → <span class="to">발언자 익명화</span></span></li>
         </ul></div>
-      <div class="tier ok"><h2>✅ 바로 활용</h2>
+      <div class="lane ok"><div class="lane-h"><div class="lane-ic">✅</div><div><div class="lane-t">바로 활용</div><div class="lane-s">그대로 넣어도 돼요</div></div></div>
         <ul>
           <li>보도자료 · 공개된 업무계획</li>
-          <li>공개 통계(무역 · 산업 통계)</li>
+          <li>공개 통계 (무역 · 산업 통계)</li>
           <li>법령 · 고시 · 국정과제</li>
           <li>공개 뉴스 · 해외 공개 자료</li>
           <li>문장 다듬기 · 일반 서식</li>
         </ul></div>
     </div>
-    <div class="tip" style="margin-top:16px;font-size:16px">💡 <strong>헷갈리면 이렇게</strong><br><b class="nw">"이 내용이 내일 신문에 실려도 괜찮은가?"</b> 아니면 넣지 않거나 가공해서 넣어요.<br>기관 보안 지침이 있다면 그게 우선이에요.</div>
+    <div class="ask"><div class="ask-ic">📰</div><div><div class="ask-q">헷갈리면 → <em>"이 내용이 내일 신문에 실려도 괜찮은가?"</em></div><div class="ask-d">아니면 넣지 않거나 가공해서 넣어요. 기관 보안 지침이 있다면 그게 우선이에요.</div></div></div>
   </section>
 
   <!-- 9. 가공 예시 -->
