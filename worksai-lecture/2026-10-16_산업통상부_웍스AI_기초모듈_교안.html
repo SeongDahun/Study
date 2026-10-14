@@ -830,11 +830,7 @@
     <style>
       .share-slide .kc{display:inline-block;min-width:22px;padding:1px 7px;margin:0 1px;border:1px solid #CBD5E1;border-bottom-width:3px;border-radius:6px;background:#fff;color:var(--ink);font-size:14px;font-weight:800;line-height:1.5;text-align:center;font-family:inherit}
       .share-slide .step-list{font-size:16px}
-      .share-slide .step-list{display:grid;grid-template-columns:1fr 1fr;column-gap:22px}
-      .share-slide .step-list li{margin:0;padding:12px 0;border-bottom:2px solid #E5E7EB}
-      .share-slide .step-list li:nth-child(1),.share-slide .step-list li:nth-child(2){padding-top:0}
-      .share-slide .step-list li:last-child{grid-column:1 / -1;border-bottom:none;padding-bottom:0}
-      .share-slide .step-list .sb span{white-space:nowrap}
+      .share-slide .step-list li{margin-bottom:8px;padding-bottom:8px}
       .share-slide .step-list .sb strong{font-size:18px}
       .share-slide .mock{border:1.5px solid var(--line);border-radius:14px;background:#0F172A;padding:10px;display:grid;grid-template-columns:1fr 1fr;gap:8px}
       .share-slide .win{background:#fff;border-radius:8px;overflow:hidden}
@@ -859,7 +855,7 @@
       <h1>두 답변을 나란히 캡처해 패들렛에 올려요</h1>
     </div>
     <div class="row">
-      <div class="col" style="flex:0 0 56%;display:flex;flex-direction:column">
+      <div class="col" style="flex:0 0 50%;display:flex;flex-direction:column">
         <ol class="step-list" style="margin-bottom:18px">
           <li><div class="sn">01</div><div class="sb"><strong>창 복제해서 2개로</strong><span><i class="bl">브라우저 탭 우클릭 → <span class="ui">복제</span></i><i class="bl">복제된 탭을 <b>바깥으로 끌어내</b> 새 창으로</i></span></div></li>
           <li><div class="sn">02</div><div class="sb"><strong>화면 반씩 나누기</strong><span><i class="bl">첫 번째 창: <span class="kc">⊞ Win</span> + <span class="kc">←</span> 왼쪽 반</i><i class="bl">두 번째 창: <span class="kc">⊞ Win</span> + <span class="kc">→</span> 오른쪽 반</i></span></div></li>
@@ -867,8 +863,7 @@
           <li><div class="sn">04</div><div class="sb"><strong>한 번에 캡처</strong><span><span class="kc">⊞ Win</span> + <span class="kc">Shift</span> + <span class="kc">S</span> → <b>두 창이 다 들어오게</b> 드래그</span></div></li>
           <li style="margin-bottom:0"><div class="sn">05</div><div class="sb"><strong>패들렛에 올리기</strong><span><span class="nw">글 쓰기 → <span class="kc">Ctrl</span> + <span class="kc">V</span>로 캡처 붙여넣기 + <b>어느 답이 더 나은지 이유 한 줄</b></span><br><span style="font-size:14px;color:var(--muted)">길이 · 말투 · 정확도 측면에서 판단할 수 있어요</span></span></div></li>
         </ol>
-        <div class="note" style="margin-top:auto;font-size:15px;line-height:1.55">🔍 <b>왜 세션을 나눌까요?</b><br>한 대화에서도 모델을 바꿀 수 있지만, 두 번째 모델이 <b>앞 답변을 읽고</b><br>"앞서 드린 문안과 다른 두 번째 안"처럼 <b>일부러 다르게</b> 써요<br>→ <b>새 대화로 나눠야</b> 두 모델이 같은 조건에서 처음부터 답해요</div>
-        <div class="tip" style="margin-top:12px;font-size:16px;white-space:nowrap">💡 서로의 경험이 모이면 <b>우리 부서만의 모델 고르는 기준</b>이 돼요</div>
+        <div class="tip" style="margin-top:auto;font-size:16px;white-space:nowrap">💡 서로의 경험이 모이면 <b>우리 부서만의 모델 고르는 기준</b>이 돼요</div>
       </div>
       <div class="col" style="padding-left:28px;border-left:1px solid var(--line);display:flex;flex-direction:column">
         <div class="mock">
@@ -878,8 +873,8 @@
         <div class="keys"><span><span class="kc">⊞ Win</span> + <span class="kc">←</span></span><span><span class="kc">⊞ Win</span> + <span class="kc">→</span></span></div>
         <div class="post"><div class="post-h">📌 패들렛 글 예시</div>
           <div class="post-img">📷 두 창을 나란히 찍은 캡처</div>
-          <div class="post-t"><i class="bl">작업: 국장님 인사말 첫 문단</i><i class="bl">모델 A vs 모델 B → <b>👍 모델 B</b></i><i class="bl">이유: 문장이 더 격식 있고<br>공급망 용어가 정확해요</i></div></div>
-        
+          <div class="post-t"><i class="bl">작업: 국장님 인사말 첫 문단</i><i class="bl">모델 A vs 모델 B → <b>👍 모델 B</b></i><i class="bl">이유: 문장이 더 격식 있고 공급망 용어가 정확해요</i></div></div>
+        <div class="note" style="margin-top:auto;font-size:15px;line-height:1.55">🔍 <b>왜 세션을 나눌까요?</b><br>한 대화에서도 모델을 바꿀 수 있지만, 두 번째 모델이 <b>앞 답변을 읽고</b><br>"앞서 드린 문안과 다른 두 번째 안"처럼 <b>일부러 다르게</b> 써요<br>→ <b>새 대화로 나눠야</b> 두 모델이 같은 조건에서 처음부터 답해요</div>
       </div>
     </div>
   </section>
