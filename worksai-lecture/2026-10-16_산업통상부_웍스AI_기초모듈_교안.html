@@ -1415,10 +1415,10 @@
       <div class="col" style="flex:0 0 44%">
         <ol class="step-list">
           <li><div class="sn">01</div><div class="sb"><strong>창 열기</strong><span>「<b>에이전트를 골라 일을 맡겨주세요</b>」 → <span class="ui">나만의 에이전트</span> 탭 → <span class="ui">+ 에이전트 만들기</span></span></div></li>
-          <li><div class="sn">02</div><div class="sb"><strong>유형 · 모델</strong><span>유형 <span class="ui">대화형</span> 그대로, 모델 <span class="ui">Auto</span><br><span style="font-size:15px;color:var(--muted)">옆의 '생각의 깊이'는 기본값 그대로 — '최대로 생각'은 느리고 크레딧이 크게 늘어요</span></span></div></li>
+          <li><div class="sn">02</div><div class="sb"><strong>유형 · 모델</strong><span>유형 <span class="ui">대화형</span> 그대로, 모델 <span class="ui">Auto</span><br><span style="font-size:15px;color:var(--muted)">옆의 '생각의 깊이'는 기본값 그대로<br>'최대로 생각'은 느리고 크레딧이 크게 늘어요</span></span></div></li>
           <li><div class="sn">03</div><div class="sb"><strong>이름</strong><span>「<b>1쪽 보고서 작성 에이전트</b>」</span></div></li>
         </ol>
-        <div class="tip">💡 필수(<span style="color:#DC2626">*</span>)는 모델 · 이름 · 프롬프트 세 가지뿐. 아이콘 · 설명은 비워도 돼요.</div>
+        <div class="tip" style="margin-top:18px">💡 필수(<span style="color:#DC2626">*</span>)는 모델 · 이름 · 프롬프트 세 가지뿐<br><span class="nw">아이콘 · 설명은 비워도 돼요</span></div>
       </div>
       <div class="col shot" style="padding-left:24px;border-left:1px solid var(--line)">
         <img src="images/shot_agent_step1.png" alt="에이전트 만들기 창 — 유형, 모델, 이름">
@@ -1437,16 +1437,21 @@
     </div>
     <div class="row">
       <div class="col" style="flex:0 0 46%;display:flex;flex-direction:column">
-        <ol class="step-list">
-          <li><div class="sn">04</div><div class="sb"><strong>프롬프트 칸</strong><span>모듈 3에서 쓴 '1쪽 보고서' 프롬프트를 붙여넣기<br><span style="font-size:15px;color:var(--muted)">(자료는 대화할 때마다 + 로 첨부)</span></span></div></li>
-        </ol>
-        <div style="margin:-6px 0 4px 50px;font-size:15px;color:var(--muted)">또는 한 줄만 넣기</div>
-        <div class="prompt-box mini" style="margin:0 0 22px 50px">자료를 받아 산업통상부 공문서 개조식 1쪽 보고서를 써주는 에이전트</div>
-        <ol class="step-list">
-          <li><div class="sn">05</div><div class="sb"><strong>요술봉 클릭</strong><span>입력칸 오른쪽 위 <span class="ui">요술봉</span> → 지시문 · 출력 형식이 담긴 프롬프트로 확장</span></div></li>
+        <style>
+          .p40 .alt{margin:10px 0 0;padding:12px 14px;border:1.5px dashed var(--lav2);border-radius:12px;background:#FAFAFF}
+          .p40 .alt-h{display:inline-block;margin-bottom:8px;padding:2px 10px;border-radius:999px;background:var(--lav);color:var(--primary);font-size:13px;font-weight:800}
+          .p40 .alt .prompt-box{margin:0}
+          .p40 .hint{display:block;margin-top:3px;font-size:14.5px;color:var(--muted)}
+        </style>
+        <ol class="step-list p40 spread" style="flex:1;display:flex;flex-direction:column">
+          <li><div class="sn">04</div><div class="sb" style="flex:1;min-width:0"><strong>프롬프트 칸에 붙여넣기</strong><span>모듈 3에서 쓴 <b style="background:var(--lav);color:var(--primary);padding:1px 6px;border-radius:5px;font-weight:800">'1쪽 보고서' 프롬프트</b><span class="hint">자료는 대화할 때마다 <span class="ui">+</span>로 첨부해요</span></span>
+            <div class="alt"><span class="alt-h">또는 한 줄만 넣어도 OK</span><div class="prompt-box mini">자료를 받아 산업통상부 공문서 개조식 1쪽 보고서를 써주는 에이전트</div></div></div></li>
+          <li class="gap" aria-hidden="true"></li>
+          <li><div class="sn">05</div><div class="sb"><strong>요술봉 클릭</strong><span>입력칸 오른쪽 위 <span class="ui">요술봉</span><br>→ <b>지시문 · 출력 형식</b>이 담긴 프롬프트로 확장</span></div></li>
+          <li class="gap" aria-hidden="true"></li>
           <li><div class="sn">06</div><div class="sb"><strong>참고 파일 · 도구</strong><span>오늘은 건너뛰기 → <span class="ui">만들기</span></span></div></li>
         </ol>
-        <div class="tip" style="margin-top:auto;font-size:16px">💡 우리 과 보고서 양식이 있다면<br>06 <span class="ui">참고 파일</span>에 <b class="nw">빈 양식 파일</b>을 첨부하세요<br><span style="font-size:14px;color:var(--muted)">내용이 든 실제 보고서 말고, 서식만 남긴 빈 양식으로</span></div>
+        <div class="tip" style="margin-top:16px;font-size:16px">💡 우리 과 보고서 양식이 있다면<br>06 <span class="ui">참고 파일</span>에 <b class="nw">빈 양식 파일</b>을 첨부하세요<br><span style="font-size:14px;color:var(--muted)">내용이 든 실제 보고서 말고, 서식만 남긴 빈 양식으로</span></div>
       </div>
       <div class="col shot" style="padding-left:24px;border-left:1px solid var(--line)">
         <img src="images/shot_agent_prompt.png" alt="요술봉으로 확장된 에이전트 프롬프트">
