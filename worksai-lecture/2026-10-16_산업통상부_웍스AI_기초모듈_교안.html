@@ -930,11 +930,18 @@
       </div>
       <div class="col align-end" style="padding-left:28px;border-left:1px solid var(--line)">
         <h2>그래서 이렇게 나눠요</h2>
-        <ul class="card-b" style="font-size:19px;line-height:1.6;margin:0;padding-left:1.1em">
-          <li style="margin-bottom:12px">길어지면 <b class="nw">"지금까지 내용 요약해줘"</b><br>→ 요약을 <span class="nw">새 대화에 붙여</span> 이어가기</li>
-          <li style="margin-bottom:12px">주제가 바뀌면 왼쪽 위 <span class="ui">새 대화</span><br><span class="sub-note">앞 주제까지 매번 같이 읽혀<br>크레딧만 쓰고 답이 섞여요</span></li>
-          <li style="margin-bottom:0">답이 엉뚱해지면 <b class="nw">새 대화에서 다시</b><br><span class="sub-note">틀린 답도 대화에 남아 계속 영향을 줘요<br>고칠수록 더 꼬이기 쉬워요</span></li>
-        </ul>
+        <style>
+          .sit{display:flex;flex-direction:column;gap:10px;margin-bottom:14px}
+          .sit-r{display:flex;gap:14px;align-items:flex-start;padding:12px 16px;border-radius:12px;background:var(--surface);border-left:4px solid var(--primary)}
+          .sit-k{flex:0 0 148px;box-sizing:border-box;text-align:center;padding:3px 10px;border-radius:999px;background:var(--lav);color:var(--primary);font-size:15px;font-weight:800;white-space:nowrap;margin-top:2px}
+          .sit-b{font-size:17px;line-height:1.5;color:var(--ink)}
+          .sit-b small{display:block;margin-top:3px;font-size:14.5px;color:var(--muted);line-height:1.45}
+        </style>
+        <div class="sit">
+          <div class="sit-r"><span class="sit-k">📏 길어지면</span><div class="sit-b"><b>"지금까지 내용 요약해줘"</b><br>→ 요약을 <b>새 대화에 붙여</b> 이어가기</div></div>
+          <div class="sit-r"><span class="sit-k">🔀 주제가 바뀌면</span><div class="sit-b">왼쪽 위 <span class="ui">새 대화</span><small>앞 주제까지 매번 같이 읽혀<br>크레딧만 쓰고 답이 섞여요</small></div></div>
+          <div class="sit-r"><span class="sit-k">⚠️ 답이 엉뚱하면</span><div class="sit-b"><b>새 대화에서 다시</b><small>틀린 답도 대화에 남아 계속 영향을 줘요<br>고칠수록 더 꼬이기 쉬워요</small></div></div>
+        </div>
         <div class="tip" style="font-size:16px">💡 하나의 일을 끝까지 다듬는 중이라면<br><b class="nw">같은 대화에서 이어 가도 돼요.</b><br>그 흐름 자체가 중요한 맥락이에요.</div>
       </div>
     </div>
