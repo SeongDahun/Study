@@ -521,30 +521,47 @@
     </div>
   </section>
 
-  <section class="slide">
+  <section class="slide case-slide">
+    <style>
+      .case-slide .kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+      .case-slide .kpi{position:relative;overflow:hidden;padding:24px 28px 26px;border-radius:16px;background:linear-gradient(160deg,#F4F4FE 0%,#EAF3FF 100%);box-shadow:0 1px 0 rgba(15,23,42,.04)}
+      .case-slide .kpi::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--grad)}
+      .case-slide .kpi-l{display:inline-block;padding:3px 12px;border-radius:999px;background:#fff;color:var(--primary);font-size:15px;font-weight:800}
+      .case-slide .kpi-v{margin:8px 0 6px;font-size:56px;line-height:1.05;font-weight:900;letter-spacing:-.02em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+      .case-slide .kpi-v small{font-size:30px;font-weight:800}
+      .case-slide .kpi-d{font-size:20px;line-height:1.45;color:var(--text)}
+      .case-slide .flow-t{margin:30px 0 14px;font-size:17px;font-weight:800;color:var(--muted);letter-spacing:.04em}
+      .case-slide .flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;align-items:stretch;gap:10px}
+      .case-slide .fs{padding:20px 20px;border:1.5px solid var(--line);border-radius:14px;background:#fff}
+      .case-slide .fs .fn{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:10px;background:var(--grad);color:#fff;font-size:15px;font-weight:800;margin-bottom:8px}
+      .case-slide .fs b{display:block;font-size:21px;color:var(--ink);margin-bottom:4px}
+      .case-slide .fs span{display:block;font-size:18px;line-height:1.45;color:var(--text)}
+      .case-slide .fa{align-self:center;color:var(--lav2);font-size:26px;font-weight:900}
+      .case-slide .src{position:absolute;left:64px;bottom:22px;right:140px;font-size:13px;color:var(--muted)}
+    </style>
     <div class="num"></div>
     <div class="steptabs"><div class="tab active">① 웍스AI 둘러보기</div><div class="tab">② 정부 지침</div><div class="tab">③ 3단계 기준</div><div class="tab">④ 가공 예시</div><div class="tab">⑤ O/X 퀴즈</div></div>
     <div class="head" style="margin-bottom:22px">
-      <div class="kicker"><span class="tag">CASE</span>01 · 참고 사례</div>
-      <h1>써 보니 무엇이 달라졌나 — 모트렉스가 구성원에게 직접 물었어요</h1>
+      <div class="kicker"><span class="tag">CASE</span>01 · 참고 사례 · 써 보니 무엇이 달라졌나</div>
+      <h1>웍스AI 도입 M사, 구성원에게 직접 물었어요</h1>
     </div>
-    <div class="row">
-      <div class="col" style="flex:0 0 44%;display:flex;flex-direction:column;gap:14px">
-        <div class="card" style="padding:16px 22px;flex:1;display:flex;flex-direction:column;justify-content:center"><div class="card-t" style="font-size:40px;color:var(--primary);margin-bottom:4px">88%</div><div class="card-b" style="font-size:17px">응답자가 <b>하루 30분 이상</b> 업무시간 절감을 체감</div></div>
-        <div class="card" style="padding:16px 22px;flex:1;display:flex;flex-direction:column;justify-content:center"><div class="card-t" style="font-size:40px;color:var(--primary);margin-bottom:4px">월 약 0.7억 원</div><div class="card-b" style="font-size:17px">줄어든 시간을 <b>인건비 기준으로 환산</b>한 생산성 개선 효과</div></div>
-        <div class="card" style="padding:16px 22px;flex:1;display:flex;flex-direction:column;justify-content:center"><div class="card-t" style="font-size:40px;color:var(--primary);margin-bottom:4px">96%</div><div class="card-b" style="font-size:17px">이용자가 전반적 만족도를 <b>'보통 이상'</b>으로 평가</div></div>
-      </div>
-      <div class="col" style="padding-left:24px;border-left:1px solid var(--line);display:flex;flex-direction:column">
-        <ol class="step-list" style="font-size:16px">
-          <li><div class="sn">01</div><div class="sb"><strong>전사 표준 환경</strong><span>개인별 AI 사용의 비용 · 보안 · 통제 한계 → 웍스AI 전사 도입</span></div></li>
-          <li><div class="sn">02</div><div class="sb"><strong>대상별 교육</strong><span>파워유저 AI 리터러시 → 전 임직원 활용 교육 · 사용 가이드 · 보안 교육</span></div></li>
-          <li><div class="sn">03</div><div class="sb"><strong>설문으로 효과 확인</strong><span>사용량은 '얼마나 썼는지', 설문은 '무엇이 달라졌는지'</span></div></li>
-          <li><div class="sn">04</div><div class="sb"><strong>다음 단계</strong><span>AI Task 조직 · 업무 자동화 · 사내 시스템 연동</span></div></li>
-        </ol>
-        <div class="tip" style="font-size:16px">💡 가장 유용했던 기능: <b>업무마다 맞는 모델 골라 쓰기</b><br>문서 작성 · 분석 · 번역 · 개발 → 02에서 직접 비교해 봐요</div>
-      </div>
+    <div class="kpis">
+      <div class="kpi"><span class="kpi-l">⏱ 업무시간</span><div class="kpi-v">88<small>%</small></div><div class="kpi-d">응답자가 <b>하루 30분 이상</b><br>업무시간 절감을 체감</div></div>
+      <div class="kpi"><span class="kpi-l">💰 생산성</span><div class="kpi-v"><small>월 약 </small>0.7<small>억 원</small></div><div class="kpi-d">줄어든 시간을<br><b>인건비 기준으로 환산</b>한 효과</div></div>
+      <div class="kpi"><span class="kpi-l">😊 만족도</span><div class="kpi-v">96<small>%</small></div><div class="kpi-d">이용자가 전반적 만족도를<br><b>'보통 이상'</b>으로 평가</div></div>
     </div>
-    <div style="position:absolute;left:64px;bottom:22px;right:120px;font-size:12px;color:var(--muted)">출처: AI3 블로그 「AI 도입 효과, 구성원에게 직접 물었습니다」(2026.10.14) · 웍스AI 운영사의 고객 사례이며, 수치는 모트렉스 사내 설문 결과(응답자 수 · 조사 시점 미공개)</div>
+    <div class="flow-t">M사는 이렇게 넓혀 왔어요</div>
+    <div class="flow">
+      <div class="fs"><div class="fn">01</div><b>전사 표준 환경</b><span>개인별 AI 사용의 비용 · 보안 · 통제 한계 → 전사 도입</span></div>
+      <div class="fa">›</div>
+      <div class="fs"><div class="fn">02</div><b>대상별 교육</b><span>파워유저 AI 리터러시 → 전 임직원 활용 교육</span></div>
+      <div class="fa">›</div>
+      <div class="fs"><div class="fn">03</div><b>설문으로 효과 확인</b><span>사용량은 '얼마나 썼는지',<br>설문은 '무엇이 달라졌는지'</span></div>
+      <div class="fa">›</div>
+      <div class="fs"><div class="fn">04</div><b>다음 단계</b><span>AI Task 조직 · 업무 자동화 · 사내 시스템 연동</span></div>
+    </div>
+    <div class="tip" style="margin-top:24px;font-size:19px">💡 가장 유용했던 기능: <b>업무마다 맞는 모델 골라 쓰기</b> (문서 작성 · 분석 · 번역 · 개발) → 02에서 직접 비교해 봐요</div>
+    <div class="src">출처: AI3 블로그 「AI 도입 효과, 구성원에게 직접 물었습니다」(2026.10.14) · 웍스AI 운영사의 고객 사례이며, 수치는 M사 사내 설문 결과</div>
   </section>
 
   <!-- 7. 정부 지침 -->
