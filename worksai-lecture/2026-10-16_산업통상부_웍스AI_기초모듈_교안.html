@@ -527,12 +527,13 @@
   <section class="slide case-slide">
     <style>
       .case-slide .kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-      .case-slide .kpi{position:relative;overflow:hidden;display:flex;align-items:center;gap:18px;padding:20px 22px 22px 28px;border-radius:16px;background:linear-gradient(160deg,#F4F4FE 0%,#EAF3FF 100%);box-shadow:0 1px 0 rgba(15,23,42,.04)}
+      .case-slide .kpi{position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:18px 22px 22px 28px;border-radius:16px;background:linear-gradient(160deg,#F4F4FE 0%,#EAF3FF 100%);box-shadow:0 1px 0 rgba(15,23,42,.04)}
       .case-slide .kpi::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--grad)}
       .case-slide .kpi-ic{flex:0 0 84px;height:84px;border-radius:22px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:52px;line-height:1;box-shadow:0 4px 14px rgba(93,95,239,.14)}
+      .case-slide .kpi-row{display:flex;align-items:center;gap:18px}
       .case-slide .kpi-c{min-width:0}
       .case-slide .kpi-l{display:inline-block;padding:3px 12px;border-radius:999px;background:#fff;color:var(--primary);font-size:15px;font-weight:800}
-      .case-slide .kpi-v{margin:8px 0 6px;font-size:56px;line-height:1.05;font-weight:900;letter-spacing:-.02em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+      .case-slide .kpi-v{margin:0 0 6px;font-size:56px;line-height:1.05;font-weight:900;letter-spacing:-.02em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
       .case-slide .kpi-v small{font-size:30px;font-weight:800}
       .case-slide .kpi-d{white-space:nowrap;font-size:19px;line-height:1.45;color:var(--text)}
       .case-slide .flow-t{margin:22px 0 12px;font-size:17px;font-weight:800;color:var(--muted);letter-spacing:.04em}
@@ -551,9 +552,9 @@
       <h1>웍스AI 도입 M사, 구성원에게 직접 물었어요</h1>
     </div>
     <div class="kpis">
-      <div class="kpi"><div class="kpi-ic">⏱️</div><div class="kpi-c"><span class="kpi-l">업무시간</span><div class="kpi-v">88<small>%</small></div><div class="kpi-d">응답자가 <b>하루 30분 이상</b><br>업무시간 절감을 체감</div></div></div>
-      <div class="kpi"><div class="kpi-ic">💰</div><div class="kpi-c"><span class="kpi-l">생산성</span><div class="kpi-v"><small>월 약 </small>0.7<small>억 원</small></div><div class="kpi-d">줄어든 시간을<br><b>인건비 기준으로 환산</b>한 효과</div></div></div>
-      <div class="kpi"><div class="kpi-ic">😊</div><div class="kpi-c"><span class="kpi-l">만족도</span><div class="kpi-v">96<small>%</small></div><div class="kpi-d">이용자가 전반적 만족도를<br><b>'보통 이상'</b>으로 평가</div></div></div>
+      <div class="kpi"><span class="kpi-l">업무시간</span><div class="kpi-row"><div class="kpi-ic">⏱️</div><div class="kpi-c"><div class="kpi-v">88<small>%</small></div><div class="kpi-d">응답자가 <b>하루 30분 이상</b><br>업무시간 절감을 체감</div></div></div></div>
+      <div class="kpi"><span class="kpi-l">생산성</span><div class="kpi-row"><div class="kpi-ic">💰</div><div class="kpi-c"><div class="kpi-v"><small>월 약 </small>0.7<small>억 원</small></div><div class="kpi-d">줄어든 시간을<br><b>인건비 기준으로 환산</b>한 효과</div></div></div></div>
+      <div class="kpi"><span class="kpi-l">만족도</span><div class="kpi-row"><div class="kpi-ic">😊</div><div class="kpi-c"><div class="kpi-v">96<small>%</small></div><div class="kpi-d">이용자가 전반적 만족도를<br><b>'보통 이상'</b>으로 평가</div></div></div></div>
     </div>
     <div class="flow-t">M사는 이렇게 넓혀 왔어요</div>
     <div class="flow">
