@@ -198,9 +198,11 @@
     border:none;border-radius:999px 0 0 999px;padding:12px 14px;background:rgba(255,255,255,.08);
     color:#CBD5E1;font:700 15px "Pretendard","Malgun Gothic","맑은 고딕",sans-serif;white-space:nowrap;transition:background .15s,color .15s}
   .toc button:hover{background:rgba(255,255,255,.18);color:#fff}
-  .toc button{flex-direction:column;align-items:flex-start;gap:5px}
-  .toc button .tn{display:inline-block;padding:2px 9px;border-radius:999px;
-    font-size:12px;letter-spacing:.02em;background:rgba(255,255,255,.14);color:#fff}
+  .toc button{gap:12px;padding:10px 14px 10px 12px}
+  .toc button .tn{flex:0 0 26px;display:flex;flex-direction:column;align-items:center;gap:2px;
+    padding:6px 0;border-radius:7px;font-size:11px;line-height:1.1;font-weight:800;background:rgba(255,255,255,.14);color:#fff}
+  .toc button .tn i{font-style:normal}
+  .toc button .tn b{margin-top:2px;padding-top:3px;border-top:1px solid rgba(255,255,255,.45);font-size:14px;line-height:1}
   .toc button.active{background:#fff;color:var(--primary)}
   .toc button.active .tn{background:var(--grad)}
   .stage{left:214px}
@@ -337,11 +339,11 @@
 </div>
 
 <nav class="toc" id="toc" aria-label="목차">
-  <button type="button" data-sec="01"><span class="tn">모듈 1</span>웍스AI 이해와 보안</button>
-  <button type="button" data-sec="02"><span class="tn">모듈 2</span>모델·토큰</button>
-  <button type="button" data-sec="03"><span class="tn">모듈 3</span>답변 잘 얻는 법</button>
-  <button type="button" data-sec="04"><span class="tn">모듈 4</span>공식 에이전트</button>
-  <button type="button" data-sec="05"><span class="tn">모듈 5</span>나만의 에이전트</button>
+  <button type="button" data-sec="01"><span class="tn"><i>모</i><i>듈</i><b>1</b></span>웍스AI 이해와 보안</button>
+  <button type="button" data-sec="02"><span class="tn"><i>모</i><i>듈</i><b>2</b></span>모델·토큰</button>
+  <button type="button" data-sec="03"><span class="tn"><i>모</i><i>듈</i><b>3</b></span>답변 잘 얻는 법</button>
+  <button type="button" data-sec="04"><span class="tn"><i>모</i><i>듈</i><b>4</b></span>공식 에이전트</button>
+  <button type="button" data-sec="05"><span class="tn"><i>모</i><i>듈</i><b>5</b></span>나만의 에이전트</button>
 </nav>
 
 <div class="stage">
