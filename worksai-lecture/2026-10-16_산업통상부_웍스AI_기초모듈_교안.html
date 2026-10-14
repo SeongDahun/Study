@@ -798,7 +798,7 @@
           <li><div class="sn">02</div><div class="sb"><strong>질문 보내기</strong><span>오른쪽 프롬프트를 복사해 입력</span></div></li>
           <li><div class="sn">03</div><div class="sb"><strong>두 번째 모델로 같은 질문</strong><span><span class="ui">새 대화</span> → <b style="background:var(--lav);color:var(--primary);padding:1px 6px;border-radius:5px;font-weight:800">두 번째 모델 선택</b> → 같은 질문<br>답변의 길이 · 말투 · 정확도 비교<br><span style="font-size:15px;color:var(--muted)">답한 모델은 답변 끝에 표시돼요</span></span></div></li>
         </ol>
-        <div class="done" style="margin-top:auto">✅ <strong>완료 기준</strong><br>패들렛에 <b>작업 · 모델 · 결과</b> 남기기<br><span style="font-size:15px">예) 인사말 초안 → ○○ 모델이 더 격식 있게 씀</span></div>
+        <div class="done" style="margin-top:auto">✅ <strong>완료 기준</strong><br>두 답변을 <b>나란히 캡처</b> + <b>더 나은 쪽과 이유 한 줄</b>을 패들렛에<br><span style="font-size:15px">올리는 방법은 다음 장에서 →</span></div>
       </div>
       <div class="col" style="padding-left:28px;border-left:1px solid var(--line);display:flex;flex-direction:column">
         <h2>실습 프롬프트 (하나 골라서)</h2>
@@ -820,6 +820,57 @@
           </div>
         </div>
         <div class="tip" style="margin-top:auto;font-size:16px">💡 서로의 경험이 모이면<br><b class="nw">우리 부서만의 모델 고르는 기준</b>이 돼요</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide share-slide">
+    <style>
+      .share-slide .kc{display:inline-block;min-width:22px;padding:1px 7px;margin:0 1px;border:1px solid #CBD5E1;border-bottom-width:3px;border-radius:6px;background:#fff;color:var(--ink);font-size:14px;font-weight:800;line-height:1.5;text-align:center;font-family:inherit}
+      .share-slide .step-list{font-size:16px}
+      .share-slide .step-list li{margin-bottom:14px}
+      .share-slide .step-list .sb strong{font-size:18px}
+      .share-slide .mock{border:1.5px solid var(--line);border-radius:14px;background:#0F172A;padding:10px;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+      .share-slide .win{background:#fff;border-radius:8px;overflow:hidden}
+      .share-slide .win-h{display:flex;align-items:center;gap:5px;padding:5px 8px;background:#E2E8F0;font-size:11px;color:var(--muted)}
+      .share-slide .win-h i{width:7px;height:7px;border-radius:50%;background:#CBD5E1;display:inline-block}
+      .share-slide .win-b{padding:10px 12px;font-size:13px;line-height:1.5;color:var(--text);min-height:92px}
+      .share-slide .win-b b{display:inline-block;margin-bottom:6px;padding:1px 8px;border-radius:999px;background:var(--lav);color:var(--primary);font-size:12px}
+      .share-slide .win-b span{display:block;height:7px;border-radius:4px;background:#E2E8F0;margin-top:6px}
+      .share-slide .keys{display:flex;justify-content:space-between;margin:6px 4px 0;font-size:13px;color:var(--muted)}
+      .share-slide .post{margin-top:14px;border:1.5px solid var(--line);border-radius:14px;padding:12px 16px;background:#fff;box-shadow:0 6px 18px rgba(15,23,42,.06)}
+      .share-slide .post-h{font-size:13px;font-weight:800;color:var(--muted);margin-bottom:8px}
+      .share-slide .post-img{height:34px;border-radius:8px;background:#EEF2FF;border:1px dashed var(--lav2);display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--primary);font-weight:700}
+      .share-slide .post-t{margin-top:8px;font-size:15px;line-height:1.55;color:var(--ink)}
+      .share-slide .post-t b{color:var(--primary)}
+    </style>
+    <div class="num"></div>
+    <div class="steptabs"><div class="tab">① 모델 고르기</div><div class="tab active">② 비교 실습</div><div class="tab">③ 토큰이란</div><div class="tab">④ 크레딧 절약</div></div>
+    <div class="head" style="margin-bottom:22px">
+      <div class="kicker"><span class="tag">SHARE</span>모듈 2 · 비교 실습 공유</div>
+      <h1>두 답변을 나란히 캡처해 패들렛에 올려요</h1>
+      <p class="sub">창을 두 개로 나눠 띄우면 한눈에 비교돼요</p>
+    </div>
+    <div class="row">
+      <div class="col" style="flex:0 0 50%;display:flex;flex-direction:column">
+        <ol class="step-list">
+          <li><div class="sn">01</div><div class="sb"><strong>창 복제해서 2개로</strong><span>브라우저 탭 우클릭 → <span class="ui">복제</span><br>복제된 탭을 <b>바깥으로 끌어내</b> 새 창으로</span></div></li>
+          <li><div class="sn">02</div><div class="sb"><strong>화면 반씩 나누기</strong><span>첫 번째 창: <span class="kc">⊞ Win</span> + <span class="kc">←</span> 왼쪽 반<br>두 번째 창: <span class="kc">⊞ Win</span> + <span class="kc">→</span> 오른쪽 반</span></div></li>
+          <li><div class="sn">03</div><div class="sb"><strong>창마다 모델 하나씩</strong><span>오른쪽 창은 <span class="ui">새 대화</span> → 다른 모델 선택<br>두 창에 <b>같은 질문</b>을 보내기</span></div></li>
+          <li><div class="sn">04</div><div class="sb"><strong>한 번에 캡처</strong><span><span class="kc">⊞ Win</span> + <span class="kc">Shift</span> + <span class="kc">S</span> → <b>두 창이 다 들어오게</b> 드래그</span></div></li>
+          <li style="margin-bottom:0"><div class="sn">05</div><div class="sb"><strong>패들렛에 올리기</strong><span>글 쓰기 → <span class="kc">Ctrl</span> + <span class="kc">V</span>로 캡처 붙여넣기<br>+ <b>어느 답이 더 나은지 이유 한 줄</b></span></div></li>
+        </ol>
+      </div>
+      <div class="col" style="padding-left:28px;border-left:1px solid var(--line);display:flex;flex-direction:column">
+        <div class="mock">
+          <div class="win"><div class="win-h"><i></i><i></i><i></i> wrks.ai · 창 1</div><div class="win-b"><b>모델 A</b><br>같은 질문의 답변<span style="width:92%"></span><span style="width:70%"></span><span style="width:84%"></span></div></div>
+          <div class="win"><div class="win-h"><i></i><i></i><i></i> wrks.ai · 창 2</div><div class="win-b"><b>모델 B</b><br>같은 질문의 답변<span style="width:86%"></span><span style="width:94%"></span><span style="width:60%"></span></div></div>
+        </div>
+        <div class="keys"><span><span class="kc">⊞ Win</span> + <span class="kc">←</span></span><span><span class="kc">⊞ Win</span> + <span class="kc">→</span></span></div>
+        <div class="post"><div class="post-h">📌 패들렛 글 예시</div>
+          <div class="post-img">📷 두 창을 나란히 찍은 캡처</div>
+          <div class="post-t">작업: 국장님 인사말 첫 문단<br>모델 A vs 모델 B → <b>👍 모델 B</b><br>이유: 문장이 더 격식 있고 공급망 용어가 정확해요</div></div>
+        <div class="tip" style="margin-top:auto;font-size:15px">💡 이유는 <b>길이 · 말투 · 정확도</b> 중 하나만 짚어도 충분해요</div>
       </div>
     </div>
   </section>
